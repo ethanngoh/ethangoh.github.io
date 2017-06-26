@@ -28,7 +28,7 @@ export default class Clock extends React.Component {
 
         const { time } = this.state;
 
-        const hours = time.hours() % 12;
+        const hours = time.hours() > 12 ? time.hours() % 12 : time.hours();
         const minutes = time.minutes();
         
 
