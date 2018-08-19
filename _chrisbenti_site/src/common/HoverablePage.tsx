@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import cx from "classnames";
+import { Link } from "react-router-dom";
 
 interface IHoverablePageState {
   hover: string | null;
@@ -37,9 +38,22 @@ class HoverablePage extends React.Component<{}, IHoverablePageState> {
     });
   };
 
-  protected getLink(href: string, text: string) {
+  protected getLink(href: string, text: string, internal: boolean = false) {
     const { hover } = this.state;
     const appHovered = hover && hover !== href;
+    if (internal) {
+      return (
+        <Link
+          className={cx({ appHovered })}
+          id={href}
+          to={href}
+          onMouseLeave={this.onMouseLeave}
+          onMouseEnter={this.onMouseEnter}
+        >
+          {text}
+        </Link>
+      );
+    }
     return (
       <a
         className={cx({ appHovered })}
