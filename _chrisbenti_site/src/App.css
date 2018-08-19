@@ -28,12 +28,16 @@ div{
 }
 
 .app {
-  padding: 35vh 30px 0;
+  padding: 0 30px;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 @media screen and (max-width: 576px) {
   .app {
-    padding: 10px 10px 0;
+    padding: 0 10px;
     font-size: 1.75rem;
   }
 }
