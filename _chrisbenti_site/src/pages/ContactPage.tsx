@@ -16,8 +16,12 @@ export class ContactPage
           {this.getLink("https://twitter.com/chrisbenti", "@chrisbenti")}
         </div>
         <div>
-          And if you're feeling chatty{" "}
-          {this.getLink("http://m.me/chris.bentivenga", "Messenger")} works too
+          If you're feeling chatty{" "}
+          {this.getLink("http://m.me/chris.bentivenga", "Messenger")} works
+        </div>
+        <div>
+          You can also try{" "}
+          {this.getLink("https://discordapp.com/users/361710258915246081", "chrisbenti#2337")} on Discord
         </div>
       </>
     );

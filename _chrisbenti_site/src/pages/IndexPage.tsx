@@ -16,8 +16,8 @@ export class IndexPage extends HoverablePage {
           I code at {this.getLink("https://www.lyft.com", "Lyft")}
         </div>
         <div>
-          And check out my{" "}
-          {this.getLink("/contact", "contact info", true)}
+          Feel free to{" "}
+          {this.getLink("/contact", "send me a message", true)} 😊
         </div>
       </>
     );
