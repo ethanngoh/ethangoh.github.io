@@ -39,6 +39,7 @@ div{
   .app {
     padding: 0 10px;
     font-size: 1.75rem;
+    height: 80vh;
   }
 }
 
