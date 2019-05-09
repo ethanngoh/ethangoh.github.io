@@ -3,16 +3,20 @@ import * as React from "react";
 import HoverablePage from "../common/HoverablePage";
 
 export class ContactPage
- extends HoverablePage {
+  extends HoverablePage {
   public render() {
     return super.containerRender(
       <>
+        <div>
+          Link up with me on{" "}
+          {this.getLink("https://www.linkedin.com/in/chrisbenti/", "LinkedIn")}
+        </div>
         <div>
           Email me at{" "}
           {this.getLink("mailto:chrisbenti.com", "chris@chrisbenti.com")}
         </div>
         <div>
-          Or check out my Twitter,{" "}
+          Check out my Twitter,{" "}
           {this.getLink("https://twitter.com/chrisbenti", "@chrisbenti")}
         </div>
         <div>
