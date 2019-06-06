@@ -13,11 +13,14 @@ export class IndexPage extends HoverablePage {
         <div>I live in {this.getLink(SEATTLE_LINK, "Seattle, WA")}</div>
         <div>
           For {this.getLink("https://www.linkedin.com/in/chrisbenti/", "work")},
-          I code at {this.getLink("https://www.lyft.com", "Lyft")}
+          I was most recently at {this.getLink("https://www.lyft.com", "Lyft")}.
         </div>
         <div>
-          Feel free to{" "}
-          {this.getLink("/contact", "send me a message", true)}
+          I'll be starting at {this.getLink("https://stripe.com/", "Stripe")}{" "}
+          soon!
+        </div>
+        <div>
+          Feel free to {this.getLink("/contact", "send me a message", true)}
         </div>
       </>
     );
