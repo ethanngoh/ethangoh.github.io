@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/iadice /static/css/main.65938976.chunk.css",
-    "main.js": "/iadice /static/js/main.7e982df2.chunk.js",
-    "main.js.map": "/iadice /static/js/main.7e982df2.chunk.js.map",
-    "runtime~main.js": "/iadice /static/js/runtime~main.2d10ce49.js",
-    "runtime~main.js.map": "/iadice /static/js/runtime~main.2d10ce49.js.map",
-    "static/css/2.d8c5999f.chunk.css": "/iadice /static/css/2.d8c5999f.chunk.css",
-    "static/js/2.8689e3b6.chunk.js": "/iadice /static/js/2.8689e3b6.chunk.js",
-    "static/js/2.8689e3b6.chunk.js.map": "/iadice /static/js/2.8689e3b6.chunk.js.map",
-    "index.html": "/iadice /index.html",
-    "precache-manifest.c9f70586749adcb55588fc1f0c00b1aa.js": "/iadice /precache-manifest.c9f70586749adcb55588fc1f0c00b1aa.js",
-    "service-worker.js": "/iadice /service-worker.js",
-    "static/css/2.d8c5999f.chunk.css.map": "/iadice /static/css/2.d8c5999f.chunk.css.map",
-    "static/css/main.65938976.chunk.css.map": "/iadice /static/css/main.65938976.chunk.css.map",
-    "static/media/App.css": "/iadice /static/media/icons-20.90247cfd.ttf"
+    "main.css": "/iadice/static/css/main.65938976.chunk.css",
+    "main.js": "/iadice/static/js/main.7e982df2.chunk.js",
+    "main.js.map": "/iadice/static/js/main.7e982df2.chunk.js.map",
+    "runtime~main.js": "/iadice/static/js/runtime~main.c0147582.js",
+    "runtime~main.js.map": "/iadice/static/js/runtime~main.c0147582.js.map",
+    "static/css/2.08de0255.chunk.css": "/iadice/static/css/2.08de0255.chunk.css",
+    "static/js/2.03de880a.chunk.js": "/iadice/static/js/2.03de880a.chunk.js",
+    "static/js/2.03de880a.chunk.js.map": "/iadice/static/js/2.03de880a.chunk.js.map",
+    "index.html": "/iadice/index.html",
+    "precache-manifest.20e51ae399e21ca41aee78d00a9f89e5.js": "/iadice/precache-manifest.20e51ae399e21ca41aee78d00a9f89e5.js",
+    "service-worker.js": "/iadice/service-worker.js",
+    "static/css/2.08de0255.chunk.css.map": "/iadice/static/css/2.08de0255.chunk.css.map",
+    "static/css/main.65938976.chunk.css.map": "/iadice/static/css/main.65938976.chunk.css.map",
+    "static/media/App.css": "/iadice/static/media/icons-20.90247cfd.ttf"
   }
 }
