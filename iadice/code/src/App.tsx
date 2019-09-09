@@ -19,11 +19,11 @@ function renderSelectOption(item: DiceColor, itemProps: IItemRendererProps) {
 }
 
 const App: React.FC = () => {
-  const [color1, setColor1] = useState(DiceColor.NONE);
-  const [color2, setColor2] = useState(DiceColor.NONE);
-  const [color3, setColor3] = useState(DiceColor.NONE);
-  const [color4, setColor4] = useState(DiceColor.NONE);
-  const [color5, setColor5] = useState(DiceColor.NONE);
+  const [color1, setColor1] = useState(DiceColor.RED);
+  const [color2, setColor2] = useState(DiceColor.RED);
+  const [color3, setColor3] = useState(DiceColor.RED);
+  const [color4, setColor4] = useState(DiceColor.RED);
+  const [color5, setColor5] = useState(DiceColor.RED);
   const [color6, setColor6] = useState(DiceColor.NONE);
   const [color7, setColor7] = useState(DiceColor.NONE);
   const [color8, setColor8] = useState(DiceColor.NONE);

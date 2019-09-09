@@ -5,6 +5,7 @@ import { permuteDice, PermutedDice } from "./services/permuteDice";
 import { DiceColor, DICE_BY_COLOR, Dice, Roll } from "./data/dice";
 
 import "./App.css";
+import { CONSOLE } from "@blueprintjs/icons/lib/esm/generated/iconContents";
 
 export const PermutationResults = ({ colors }: { colors: DiceColor[] }) => {
   const filteredColors: DiceColor[] = colors.filter(
@@ -142,10 +143,15 @@ const PercentageTR = ({
     <tr>
       <td style={{ textAlign: "right" }}>{title}</td>
       {values
-        .map(
-          min =>
-            extractedRolls.filter(x => x >= min).length / extractedRolls.length
-        )
+        .map(min => {
+          let passCount = 0;
+          for (var i = 0; i < extractedRolls.length; i++) {
+            if (extractedRolls[i] >= min) {
+              passCount += 1;
+            }
+          }
+          return passCount / extractedRolls.length;
+        })
         .map((value, i) => (
           <td
             key={i}
@@ -217,7 +223,8 @@ const PermuteRowForRollType = ({
   possibleValues: number[];
 }) => {
   const featureExtracted = permuteDice.rolls.map(x => x[feature]);
-  const featureMax = Math.max(...featureExtracted);
+  const featureUnique = Array.from(new Set(featureExtracted));
+  const featureMax = Math.max(...featureUnique);
   if (featureMax === 0) {
     return null;
   }

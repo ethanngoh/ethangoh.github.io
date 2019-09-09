@@ -1,11 +1,12 @@
 import { DiceColor, Roll, Dice } from "../data/dice";
+import mem from "mem";
 
 export interface PermutedDice {
   colors: DiceColor[];
   rolls: Roll[];
 }
 
-function combineRolls(roll1: Roll, roll2: Roll): Roll {
+const combineRolls = mem((roll1: Roll, roll2: Roll) => {
   return {
     damage: roll1.damage + roll2.damage,
     surge: roll1.surge + roll2.surge,
@@ -14,23 +15,25 @@ function combineRolls(roll1: Roll, roll2: Roll): Roll {
     surgeResist: roll1.surgeResist + roll2.surgeResist,
     evade: roll1.evade + roll2.evade
   };
-}
+});
 
-function combineRollsGroups(rolls1: Roll[], rolls2: Roll[]): Roll[] {
-  const rolls: Roll[] = [];
-  rolls1.forEach(d1R => {
-    rolls2.forEach(d2R => {
-      rolls.push(combineRolls(d1R, d2R));
-    });
-  });
+const combineRollsGroups = mem((rolls1: Roll[], rolls2: Roll[]) => {
+  const rolls: Roll[] = Array(rolls1.length * rolls2.length);
+  let place = 0;
+  for (var i = 0; i < rolls1.length; i++) {
+    for (var j = 0; j < rolls2.length; j++) {
+      rolls[place] = combineRolls(rolls1[i], rolls2[j]);
+      place++;
+    }
+  }
   return rolls;
-}
+});
 
-export function permuteDice(dice: Dice[]): PermutedDice {
+export const permuteDice = mem((dice: Dice[]) => {
   const colors = dice.map(d => d.color);
   const rolls = dice
     .map(d => d.rolls)
     .reduce((a, b) => combineRollsGroups(a, b));
 
   return { colors, rolls };
-}
+});

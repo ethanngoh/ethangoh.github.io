@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "061b72fe818c0209895c2d86224355e0",
+    "revision": "697c819266d64938725e639f4534dd60",
     "url": "/iadice/index.html"
   },
   {
-    "revision": "c1c20fa4cead9724a5d8",
-    "url": "/iadice/static/css/2.08de0255.chunk.css"
+    "revision": "8509989786f811c11182",
+    "url": "/iadice/static/css/2.a071451f.chunk.css"
   },
   {
-    "revision": "5169921518359d100add",
+    "revision": "a8df9886d401ab64eb9e",
     "url": "/iadice/static/css/main.65938976.chunk.css"
   },
   {
-    "revision": "c1c20fa4cead9724a5d8",
-    "url": "/iadice/static/js/2.6bd27c58.chunk.js"
+    "revision": "8509989786f811c11182",
+    "url": "/iadice/static/js/2.3e9fd8cf.chunk.js"
   },
   {
-    "revision": "5169921518359d100add",
-    "url": "/iadice/static/js/main.68317538.chunk.js"
+    "revision": "a8df9886d401ab64eb9e",
+    "url": "/iadice/static/js/main.9dbf1825.chunk.js"
   },
   {
     "revision": "07f9e6a9d7cee0c90856",
