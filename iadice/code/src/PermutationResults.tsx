@@ -19,7 +19,11 @@ export const PermutationResults = ({ colors }: { colors: DiceColor[] }) => {
 
   const hasAttack =
     colors.filter(
-      x => x === DiceColor.RED || x === DiceColor.GREEN || x === DiceColor.BLUE
+      x =>
+        x === DiceColor.RED ||
+        x === DiceColor.GREEN ||
+        x === DiceColor.BLUE ||
+        x === DiceColor.YELLOW
     ).length > 0;
 
   const hasDefence =
@@ -46,7 +50,7 @@ export const PermutationResults = ({ colors }: { colors: DiceColor[] }) => {
       <HTMLTable bordered condensed striped>
         <thead>
           <tr>
-            <th></th>
+            <th />
             {possibleValues.map(x => (
               <th key={x}>{x}+</th>
             ))}

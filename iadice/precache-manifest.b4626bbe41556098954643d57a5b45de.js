@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "49002115a4437f659e248e2c2cfa6288",
+    "revision": "0a69e70f2c12857118b65566b654ebe2",
     "url": "/iadice/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/iadice/static/css/2.08de0255.chunk.css"
   },
   {
-    "revision": "aeef9ae717ab2d495cae",
+    "revision": "9b79cf3add875d4c6244",
     "url": "/iadice/static/css/main.65938976.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/iadice/static/js/2.03de880a.chunk.js"
   },
   {
-    "revision": "aeef9ae717ab2d495cae",
-    "url": "/iadice/static/js/main.7e982df2.chunk.js"
+    "revision": "9b79cf3add875d4c6244",
+    "url": "/iadice/static/js/main.bd395ba5.chunk.js"
   },
   {
     "revision": "07f9e6a9d7cee0c90856",
