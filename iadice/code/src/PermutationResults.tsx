@@ -12,7 +12,7 @@ export const PermutationResults = ({ colors }: { colors: DiceColor[] }) => {
     color => color !== DiceColor.NONE
   );
   if (filteredColors.length === 0) {
-    return <i>Select some dice first, fam</i>;
+    return <i>Select some dice first, my people</i>;
   }
   const colorsAsDice: Dice[] = filteredColors.map(
     color => DICE_BY_COLOR[color]
