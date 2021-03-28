@@ -1,5 +1,3 @@
-import * as React from "react";
-
 import HoverablePage from "../common/HoverablePage";
 
 const SEATTLE_LINK =
@@ -8,7 +6,7 @@ const SEATTLE_LINK =
 export class IndexPage extends HoverablePage {
   public render() {
     return super.containerRender(
-      <>
+      <div className="oldhome">
         <div>Hello, my name is Chris</div>
         <div>I live in {this.getLink(SEATTLE_LINK, "Seattle, WA")}</div>
         <div>
@@ -18,7 +16,7 @@ export class IndexPage extends HoverablePage {
         <div>
           Feel free to {this.getLink("/contact", "send me a message", true)}
         </div>
-      </>
+      </div>
     );
   }
 }

@@ -1,8 +1,7 @@
-import React from "react";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { ContactPage } from "./pages/ContactPage";
 import { IndexPage } from "./pages/IndexPage";
-import "./AppStyles.css";
+import { Clock } from "./pages/Clock";
 
 function App() {
   return (
@@ -10,6 +9,9 @@ function App() {
       <Switch>
         <Route path="/contact">
           <ContactPage />
+        </Route>
+        <Route path="/clock">
+          <Clock></Clock>
         </Route>
         <Route path="/">
           <IndexPage />

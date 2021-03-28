@@ -1,12 +1,10 @@
-import * as React from "react";
-
 import HoverablePage from "../common/HoverablePage";
 
 export class ContactPage extends HoverablePage {
   public render() {
     return super.containerRender(
       <>
-        <div>
+        <div className={"oldhome"}>
           Link up with me on{" "}
           {this.getLink("https://www.linkedin.com/in/chrisbenti/", "LinkedIn")}
         </div>

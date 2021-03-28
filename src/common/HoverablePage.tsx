@@ -2,6 +2,7 @@ import * as React from "react";
 
 import cx from "classnames";
 import { Link } from "react-router-dom";
+import "./AppStyles.scss";
 
 interface IHoverablePageState {
   hover: string | null;
@@ -15,15 +16,25 @@ class HoverablePage extends React.Component<{}, IHoverablePageState> {
   public containerRender(children: React.ReactElement<any>) {
     const { hover } = this.state;
     return (
-      <div
-        className={cx({
-          app: true,
-          appHovered: hover,
-        })}
-      >
-        {children}
+      <div className="oldhome">
+        <div
+          className={cx({
+            app: true,
+            appHovered: hover,
+          })}
+        >
+          {children}
+        </div>
       </div>
     );
+  }
+
+  public componentWillMount() {
+    document.body.style.backgroundColor = "#1e90ff";
+  }
+
+  public componentWillUnmount() {
+    document.body.style.backgroundColor = "";
   }
 
   public onMouseEnter = (event: React.MouseEvent<HTMLAnchorElement>) => {
