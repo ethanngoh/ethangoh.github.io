@@ -6,10 +6,10 @@ import { BlackPage } from "./pages/BlackPage";
 import { SparrowPage } from "./pages/SparrowPage";
 
 export const ReactRoutes = {
-    "/clock": () => <Clock />,
-    "/contact": () => <ContactPage />,
-    "/black": () => <BlackPage />,
-    "/sparrow": () => <SparrowPage />
+    "/clock": { component: <Clock />, title: "Clock" },
+    "/contact": { component: <ContactPage />, title: "Contact" },
+    "/black": { component: <BlackPage />, title: "Black Page" },
+    "/sparrow": { component: <SparrowPage />, title: "JACK SPARROW" }
 };
 
 export const RedirectRoutes = {
