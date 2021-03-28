@@ -2,7 +2,7 @@ import React from "react";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { ContactPage } from "./pages/ContactPage";
 import { IndexPage } from "./pages/IndexPage";
-import "./App.css";
+import "./AppStyles.css";
 
 function App() {
   return (
