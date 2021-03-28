@@ -6,12 +6,12 @@ import { Clock } from "./pages/Clock";
 import { BlackPage } from "./pages/BlackPage";
 
 export const ReactRoutes = {
-  "/clock": () => <Clock />,
-  "/contact": () => <ContactPage />,
-  "/black": () => <BlackPage />,
-  "/": () => <IndexPage />,
+    "/clock": () => <Clock />,
+    "/contact": () => <ContactPage />,
+    "/black": () => <BlackPage />,
+    "/": () => <IndexPage />
 };
 
 export const RedirectRoutes = {
-  "/pc": "https://pcpartpicker.com/user/chrisbenti/saved/kP29WZ",
+    "/pc": "https://pcpartpicker.com/user/chrisbenti/saved/kP29WZ"
 };
