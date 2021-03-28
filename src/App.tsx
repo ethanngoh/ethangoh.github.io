@@ -8,13 +8,15 @@ function App() {
         <Router basename="/">
             <Switch>
                 {Object.entries(RedirectRoutes).map(([url, location]) => (
-                    <Route path={url}>
+                    <Route path={url} key={url}>
                         <RedirectPage href={location} />
                     </Route>
                 ))}
 
                 {Object.entries(ReactRoutes).map(([url, component]) => (
-                    <Route path={url}>{component}</Route>
+                    <Route key={url} path={url}>
+                        {component}
+                    </Route>
                 ))}
 
                 {/* Index page last so there's no chance it conflicts with anything */}

@@ -1,15 +1,15 @@
 import React from "react";
 
 import { ContactPage } from "./pages/ContactPage";
-import { IndexPage } from "./pages/IndexPage";
 import { Clock } from "./pages/Clock";
 import { BlackPage } from "./pages/BlackPage";
+import { SparrowPage } from "./pages/SparrowPage";
 
 export const ReactRoutes = {
     "/clock": () => <Clock />,
     "/contact": () => <ContactPage />,
     "/black": () => <BlackPage />,
-    "/": () => <IndexPage />
+    "/sparrow": () => <SparrowPage />
 };
 
 export const RedirectRoutes = {
