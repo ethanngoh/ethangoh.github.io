@@ -1,8 +1,7 @@
-import React from 'react';
+
 import SplitNumbers from '../SplitNumbers';
 
 export default function ClockNumber({num1, num2}){
-    const number = 10;
     const size = 80;
     const borderRadius = '10vmin';
     
