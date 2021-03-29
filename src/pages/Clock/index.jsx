@@ -1,8 +1,14 @@
 import React from "react";
 import ClockNumber from "./ClockNumber";
 import moment from "moment";
+import { useBackgroundColor } from "../../hooks/useBackgroundColor";
 
-export class Clock extends React.Component {
+export const Clock = () => {
+    useBackgroundColor('black');
+    return <OldClock></OldClock>;
+}
+
+export class OldClock extends React.Component {
     constructor() {
         super();
 
@@ -14,14 +20,6 @@ export class Clock extends React.Component {
             const time = moment();
             this.setState({ time });
         }, 1000);
-    }
-
-    componentWillMount() {
-        document.body.style.backgroundColor = "black";
-    }
-
-    componentWillUnmount() {
-        document.body.style.backgroundColor = "";
     }
 
     render() {
