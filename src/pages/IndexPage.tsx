@@ -6,7 +6,8 @@ import { GoGlobe } from "react-icons/go";
 import { useBackgroundColor } from "../hooks/useBackgroundColor";
 
 const COLORS = {
-    ROYAL_BLUE: "#002366"
+    ROYAL_BLUE: "#002366",
+    OFF_WHITE: "#FFFAFA"
 };
 
 const HomePage = styled.div`
@@ -21,6 +22,7 @@ const WrappingBox = styled.div`
 
     border: solid 20px ${COLORS.ROYAL_BLUE};
     color: ${COLORS.ROYAL_BLUE};
+    background-color: ${COLORS.OFF_WHITE};
 
     display: flex;
     align-items: center;
@@ -113,7 +115,7 @@ const DetailLink = styled.a`
 `;
 
 export const IndexPage = () => {
-    useBackgroundColor("#FFFAFA");
+    useBackgroundColor(COLORS.ROYAL_BLUE);
     return (
         <HomePage>
             <Div100vh style={{ width: "100vw" }}>
