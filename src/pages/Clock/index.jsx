@@ -4,9 +4,9 @@ import moment from "moment";
 import { useBackgroundColor } from "../../hooks/useBackgroundColor";
 
 export const Clock = () => {
-    useBackgroundColor('black');
+    useBackgroundColor("black");
     return <OldClock></OldClock>;
-}
+};
 
 export class OldClock extends React.Component {
     constructor() {
