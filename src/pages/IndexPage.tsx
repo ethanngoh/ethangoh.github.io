@@ -1,34 +1,10 @@
 import styled from "styled-components";
 
-import Div100vh from "react-div-100vh";
 import { ImMail2, ImLinkedin, ImLink } from "react-icons/im";
 import { GoGlobe } from "react-icons/go";
 import { useBackgroundColor } from "../hooks/useBackgroundColor";
-
-const COLORS = {
-    ROYAL_BLUE: "#002366",
-    OFF_WHITE: "#FFFAFA"
-};
-
-const HomePage = styled.div`
-    font-family: "Raleway", sans-serif;
-`;
-
-const WrappingBox = styled.div`
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 3em;
-
-    border: solid 20px ${COLORS.ROYAL_BLUE};
-    color: ${COLORS.ROYAL_BLUE};
-    background-color: ${COLORS.OFF_WHITE};
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-`;
+import { COLORS } from "../colors";
+import { RoyalBluePage } from "../components/royalBluePage";
 
 const Content = styled.div`
     display: flex;
@@ -117,64 +93,57 @@ const DetailLink = styled.a`
 export const IndexPage = () => {
     useBackgroundColor(COLORS.ROYAL_BLUE);
     return (
-        <HomePage>
-            <Div100vh style={{ width: "100vw" }}>
-                <WrappingBox>
-                    <Content>
-                        <Header>
-                            <Name>Chris Bentivenga</Name>
-                            <Subheader>Software Engineer</Subheader>
-                        </Header>
-                        <Spacer />
-                        <Details>
-                            <DetailItem>
-                                <DetailIcon>
-                                    <GoGlobe />
-                                </DetailIcon>
-                                <DetailLink
-                                    target="_blank"
-                                    href="https://www.google.com/maps/place/Seattle,+WA/data=!4m2!3m1!1s0x5490102c93e83355:0x102565466944d59a?sa=X&ved=2ahUKEwjhu_nA2ffcAhUD3Z8KHdR1BQYQ8gEwGHoECAsQCw"
-                                >
-                                    Seattle, WA
-                                </DetailLink>
-                            </DetailItem>
-                            <DetailItem>
-                                <DetailIcon>
-                                    <ImMail2 />
-                                </DetailIcon>
-                                <DetailLink
-                                    target="_blank"
-                                    href="mailto:chris@chrisbenti.com"
-                                >
-                                    chris@chrisbenti.com
-                                </DetailLink>
-                            </DetailItem>
-                            <DetailItem>
-                                <DetailIcon>
-                                    <ImLink />
-                                </DetailIcon>
-                                <DetailLink
-                                    target="_blank"
-                                    href="chrisbenti.com"
-                                >
-                                    chrisbenti.com
-                                </DetailLink>
-                            </DetailItem>
-                            <DetailItem>
-                                <DetailIcon>
-                                    <ImLinkedin />
-                                </DetailIcon>
-                                <DetailLink
-                                    target="_blank"
-                                    href="https://www.linkedin.com/in/chrisbenti/"
-                                >
-                                    chrisbenti
-                                </DetailLink>
-                            </DetailItem>
-                        </Details>
-                    </Content>
-                </WrappingBox>
-            </Div100vh>
-        </HomePage>
+        <RoyalBluePage>
+            <Content>
+                <Header>
+                    <Name>Chris Bentivenga</Name>
+                    <Subheader>Software Engineer</Subheader>
+                </Header>
+                <Spacer />
+                <Details>
+                    <DetailItem>
+                        <DetailIcon>
+                            <GoGlobe />
+                        </DetailIcon>
+                        <DetailLink
+                            target="_blank"
+                            href="https://www.google.com/maps/place/Seattle,+WA/data=!4m2!3m1!1s0x5490102c93e83355:0x102565466944d59a?sa=X&ved=2ahUKEwjhu_nA2ffcAhUD3Z8KHdR1BQYQ8gEwGHoECAsQCw"
+                        >
+                            Seattle, WA
+                        </DetailLink>
+                    </DetailItem>
+                    <DetailItem>
+                        <DetailIcon>
+                            <ImMail2 />
+                        </DetailIcon>
+                        <DetailLink
+                            target="_blank"
+                            href="mailto:chris@chrisbenti.com"
+                        >
+                            chris@chrisbenti.com
+                        </DetailLink>
+                    </DetailItem>
+                    <DetailItem>
+                        <DetailIcon>
+                            <ImLink />
+                        </DetailIcon>
+                        <DetailLink target="_blank" href="chrisbenti.com">
+                            chrisbenti.com
+                        </DetailLink>
+                    </DetailItem>
+                    <DetailItem>
+                        <DetailIcon>
+                            <ImLinkedin />
+                        </DetailIcon>
+                        <DetailLink
+                            target="_blank"
+                            href="https://www.linkedin.com/in/chrisbenti/"
+                        >
+                            chrisbenti
+                        </DetailLink>
+                    </DetailItem>
+                </Details>
+            </Content>
+        </RoyalBluePage>
     );
 };
