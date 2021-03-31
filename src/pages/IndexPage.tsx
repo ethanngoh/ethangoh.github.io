@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-import { ImMail2, ImLinkedin, ImLink } from "react-icons/im";
+import { ImLinkedin, ImLink } from "react-icons/im";
+import { IoIosMail } from "react-icons/io";
 import { GoGlobe } from "react-icons/go";
 import { useBackgroundColor } from "../hooks/useBackgroundColor";
 import { COLORS } from "../colors";
@@ -114,7 +115,7 @@ export const IndexPage = () => {
                     </DetailItem>
                     <DetailItem>
                         <DetailIcon>
-                            <ImMail2 />
+                            <IoIosMail />
                         </DetailIcon>
                         <DetailLink
                             target="_blank"
