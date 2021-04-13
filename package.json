@@ -38,7 +38,7 @@
         "build": "GENERATE_SOURCEMAP=false react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "lint": "npx prettier --write .",
+        "lint": "prettier --write .",
         "prepare": "husky install",
         "spellcheck": "cspell src/**/*.{tsx,ts,html}"
     },
