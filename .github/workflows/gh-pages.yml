@@ -14,7 +14,6 @@ jobs:
               uses: actions/setup-node@v1
               with:
                   node-version: "14.x"
-            - run: npm i -g npx
             - run: npm ci
             - run: npx prettier --check .
             - run: npm run spellcheck
