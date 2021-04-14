@@ -10,7 +10,6 @@ const WrappingBox = styled.div`
     height: 100%;
     width: 100%;
     box-sizing: border-box;
-    padding: 3em;
 
     border: solid 20px ${COLORS.ROYAL_BLUE};
     color: ${COLORS.ROYAL_BLUE};
@@ -22,10 +21,44 @@ const WrappingBox = styled.div`
     text-align: center;
 `;
 
-export const RoyalBluePage: React.FunctionComponent = (props) => (
+const WrappingBoxNoBorder = styled.div`
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+
+    color: ${COLORS.ROYAL_BLUE};
+    background-color: ${COLORS.OFF_WHITE};
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+`;
+
+export const Padding = styled.div`
+    padding: 3em;
+`;
+
+export const NoPaddingNoBluePage: React.FunctionComponent = (props) => (
+    <Div100vh style={{ width: "100vw" }}>
+        <WrappingBoxNoBorder {...props} />
+    </Div100vh>
+);
+
+export const RoyalBluePageNoPadding: React.FunctionComponent = (props) => (
     <RoyalFont>
         <Div100vh style={{ width: "100vw" }}>
             <WrappingBox {...props} />
         </Div100vh>
+    </RoyalFont>
+);
+
+export const RoyalBluePage: React.FunctionComponent = (props) => (
+    <RoyalFont>
+        <Padding>
+            <Div100vh style={{ width: "100vw" }}>
+                <WrappingBox {...props} />
+            </Div100vh>
+        </Padding>
     </RoyalFont>
 );
