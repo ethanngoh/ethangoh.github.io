@@ -3,6 +3,7 @@ import { ReactRoutes, RedirectRoutes } from "./routes";
 import { RedirectPage } from "./pages/RedirectPage";
 import { IndexPage } from "./pages/IndexPage";
 import { Helmet } from "react-helmet";
+import { NotFoundPage } from "./pages/NotFoundPage";
 
 function App() {
     return (
@@ -24,11 +25,15 @@ function App() {
                 ))}
 
                 {/* Index page last so there's no chance it conflicts with anything */}
-                <Route path="/">
+                <Route exact path="/">
                     <Helmet>
                         <title>Chris Bentivenga</title>
                     </Helmet>
                     <IndexPage />
+                </Route>
+
+                <Route>
+                    <NotFoundPage />
                 </Route>
             </Switch>
         </Router>
