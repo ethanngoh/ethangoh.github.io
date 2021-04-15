@@ -25,7 +25,8 @@ const RESOURCES = [
         "/how-it-works",
         "Documentation on how the site works",
         "chrisbenti.com/how-it-works"
-    ]
+    ],
+    ["/cal", "Calendar Page, no details", "chrisbenti.com/cal"]
 ];
 
 export const ResourcesPage = () => (

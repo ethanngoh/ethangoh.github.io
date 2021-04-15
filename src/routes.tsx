@@ -4,6 +4,7 @@ import { SparrowPage } from "./pages/SparrowPage";
 import { ResumePage } from "./pages/ResumePage";
 import { FindTime } from "./pages/FindTime";
 import { ResourcesPage } from "./pages/ResourcesPage";
+import { Calendar } from "./pages/Calendar";
 
 export const ReactRoutes = {
     "/clock": { component: <Clock />, title: "Clock" },
@@ -20,6 +21,10 @@ export const ReactRoutes = {
     "/ls": {
         component: <ResourcesPage />,
         title: "Available Resources | Chris Bentivenga"
+    },
+    "/cal": {
+        component: <Calendar />,
+        title: "Calendar | Chris Bentivenga"
     }
 };
 
