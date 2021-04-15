@@ -3,6 +3,7 @@ import { BlackPage } from "./pages/BlackPage";
 import { SparrowPage } from "./pages/SparrowPage";
 import { ResumePage } from "./pages/ResumePage";
 import { FindTime } from "./pages/FindTime";
+import { ResourcesPage } from "./pages/ResourcesPage";
 
 export const ReactRoutes = {
     "/clock": { component: <Clock />, title: "Clock" },
@@ -15,6 +16,10 @@ export const ReactRoutes = {
     "/find-time": {
         component: <FindTime />,
         title: "Find Time | Chris Bentivenga"
+    },
+    "/ls": {
+        component: <ResourcesPage />,
+        title: "Available Resources | Chris Bentivenga"
     }
 };
 
