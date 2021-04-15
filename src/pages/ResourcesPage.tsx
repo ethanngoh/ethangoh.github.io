@@ -20,7 +20,12 @@ const RESOURCES = [
     ["/", "Home page. Think of it as a business card", "chrisbenti.com"],
     ["/resume", "Link to my resume.", "chrisbenti.com/resume"],
     ["/find-time", "Schedule a meeting with me.", "chrisbenti.com/find-time"],
-    ["/zoom", "Personal Zoom link.", "chrisbenti.com/zoom"]
+    ["/zoom", "Personal Zoom link.", "chrisbenti.com/zoom"],
+    [
+        "/how-it-works",
+        "Documentation on how the site works",
+        "chrisbenti.com/how-it-works"
+    ]
 ];
 
 export const ResourcesPage = () => (

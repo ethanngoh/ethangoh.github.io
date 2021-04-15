@@ -26,5 +26,7 @@ export const ReactRoutes = {
 export const RedirectRoutes = {
     "/pc": "https://pcpartpicker.com/user/chrisbenti/saved/kP29WZ",
     "/zoom":
-        "https://us04web.zoom.us/j/4894814721?pwd=T05md1JJaUFGNG9oZ09vRHJ3RlQ5QT09"
+        "https://us04web.zoom.us/j/4894814721?pwd=T05md1JJaUFGNG9oZ09vRHJ3RlQ5QT09",
+    "/how-it-works":
+        "https://docs.google.com/document/d/1QGgCjgyL10sENRjS8uEywqrc7sY7Qs306ny_ZID4Ixw/edit?usp=sharing"
 };
