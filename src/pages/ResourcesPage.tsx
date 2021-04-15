@@ -42,7 +42,7 @@ export const ResourcesPage = () => (
                         <TD>{path}</TD>
                         <TD>{desc}</TD>
                         <TD>
-                            <a href={full}>{full}</a>
+                            <a href={`https://${full}`}>{full}</a>
                         </TD>
                     </TR>
                 ))}
