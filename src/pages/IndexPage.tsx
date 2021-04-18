@@ -128,7 +128,7 @@ export const IndexPage = () => {
                         <DetailIcon>
                             <ImLink />
                         </DetailIcon>
-                        <DetailLink target="_blank" href="chrisbenti.com">
+                        <DetailLink target="_blank" href="//chrisbenti.com">
                             chrisbenti.com
                         </DetailLink>
                     </DetailItem>
