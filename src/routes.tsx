@@ -5,6 +5,7 @@ import { ResumePage } from "./pages/ResumePage";
 import { FindTime } from "./pages/FindTime";
 import { ResourcesPage } from "./pages/ResourcesPage";
 import { Calendar } from "./pages/Calendar";
+import { SendMoney } from "./pages/SendMoney";
 
 export const ReactRoutes = {
     "/clock": { component: <Clock />, title: "Clock" },
@@ -25,6 +26,10 @@ export const ReactRoutes = {
     "/cal": {
         component: <Calendar />,
         title: "Calendar | Chris Bentivenga"
+    },
+    "/send-money": {
+        component: <SendMoney />,
+        title: "Send Money | Chris Bentivenga"
     }
 };
 

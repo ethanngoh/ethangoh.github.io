@@ -1,20 +1,5 @@
 import { RoyalBluePage } from "../components/royalBluePage";
-import styled from "styled-components";
-
-const Table = styled.table`
-    border-collapse: collapse;
-`;
-const THead = styled.thead``;
-const TBody = styled.tbody``;
-const TR = styled.tr``;
-const TH = styled.th`
-    border: 1px solid black;
-    padding: 0.5em;
-`;
-const TD = styled.td`
-    border: 1px solid black;
-    padding: 0.25em 0.5em;
-`;
+import { Table, THead, TH, TBody, TR, TD } from "../components/table";
 
 const RESOURCES = [
     ["/", "Home page. Think of it as a business card", "chrisbenti.com"],
@@ -26,7 +11,8 @@ const RESOURCES = [
         "Documentation on how the site works",
         "chrisbenti.com/how-it-works"
     ],
-    ["/cal", "Calendar Page, no details", "chrisbenti.com/cal"]
+    ["/cal", "Calendar Page, no details", "chrisbenti.com/cal"],
+    ["/send-money", "Send money to me"]
 ];
 
 export const ResourcesPage = () => (
