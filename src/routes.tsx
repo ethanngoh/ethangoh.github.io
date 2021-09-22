@@ -38,5 +38,6 @@ export const RedirectRoutes = {
     "/zoom":
         "https://us04web.zoom.us/j/4894814721?pwd=T05md1JJaUFGNG9oZ09vRHJ3RlQ5QT09",
     "/how-it-works":
-        "https://docs.google.com/document/d/1QGgCjgyL10sENRjS8uEywqrc7sY7Qs306ny_ZID4Ixw/edit?usp=sharing"
+        "https://docs.google.com/document/d/1QGgCjgyL10sENRjS8uEywqrc7sY7Qs306ny_ZID4Ixw/edit?usp=sharing",
+    "/drop": "https://www.dropbox.com/request/N24zVQFjrYVEGzYLQw2B"
 };
