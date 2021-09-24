@@ -12,8 +12,8 @@ const RESOURCES = [
         "chrisbenti.com/how-it-works"
     ],
     ["/cal", "Calendar Page, no details", "chrisbenti.com/cal"],
-    ["/send-money", "Send money to me"],
-    ["/drop", "Drop Site"]
+    ["/send-money", "Send money to me", "chrisbenti.com/send-money"],
+    ["/drop", "Drop Site", "chrisbenti.com/drop"]
 ];
 
 export const ResourcesPage = () => (
