@@ -2,9 +2,8 @@ import { RoyalBluePage } from "../components/royalBluePage";
 import { Table, THead, TH, TBody, TR, TD } from "../components/table";
 
 const PROVIDERS = [
-    ["Venmo", "https://venmo.com/u/ChrisBenti91"],
-    ["CashApp", "https://cash.app/$chrisbenti"],
-    ["PayPal", "https://paypal.me/ChrisBentivenga?locale.x=en_US"]
+    ["Venmo", "https://venmo.com/u/Eric-Gao-4"],
+    ["PayPal", "https://paypal.me/yhgoh88?locale.x=en_US"]
 ];
 export const SendMoney = () => {
     return (

@@ -97,7 +97,7 @@ export const IndexPage = () => {
         <RoyalBluePage>
             <Content>
                 <Header>
-                    <Name>Chris Bentivenga</Name>
+                    <Name>Ethan Goh</Name>
                     <Subheader>Software Engineer</Subheader>
                 </Header>
                 <Spacer />
@@ -119,17 +119,17 @@ export const IndexPage = () => {
                         </DetailIcon>
                         <DetailLink
                             target="_blank"
-                            href="mailto:chris@chrisbenti.com"
+                            href="mailto:ethan@ethangoh.com"
                         >
-                            chris@chrisbenti.com
+                            ethan@ethangoh.com
                         </DetailLink>
                     </DetailItem>
                     <DetailItem>
                         <DetailIcon>
                             <ImLink />
                         </DetailIcon>
-                        <DetailLink target="_blank" href="//chrisbenti.com">
-                            chrisbenti.com
+                        <DetailLink target="_blank" href="//ethangoh.com">
+                            ethangoh.com
                         </DetailLink>
                     </DetailItem>
                     <DetailItem>
@@ -138,9 +138,9 @@ export const IndexPage = () => {
                         </DetailIcon>
                         <DetailLink
                             target="_blank"
-                            href="https://www.linkedin.com/in/chrisbenti/"
+                            href="https://www.linkedin.com/in/ethangoh/"
                         >
-                            chrisbenti
+                            ethangoh
                         </DetailLink>
                     </DetailItem>
                 </Details>

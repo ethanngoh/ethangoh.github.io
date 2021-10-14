@@ -2,18 +2,18 @@ import { RoyalBluePage } from "../components/royalBluePage";
 import { Table, THead, TH, TBody, TR, TD } from "../components/table";
 
 const RESOURCES = [
-    ["/", "Home page. Think of it as a business card", "chrisbenti.com"],
-    ["/resume", "Link to my resume.", "chrisbenti.com/resume"],
-    ["/find-time", "Schedule a meeting with me.", "chrisbenti.com/find-time"],
-    ["/zoom", "Personal Zoom link.", "chrisbenti.com/zoom"],
+    ["/", "Home page. Think of it as a business card", "ethangoh.com"],
+    ["/resume", "Link to my resume.", "ethangoh.com/resume"],
+    ["/find-time", "Schedule a meeting with me.", "ethangoh.com/find-time"],
+    ["/zoom", "Personal Zoom link.", "ethangoh.com/zoom"],
     [
         "/how-it-works",
         "Documentation on how the site works",
-        "chrisbenti.com/how-it-works"
+        "ethangoh.com/how-it-works"
     ],
-    ["/cal", "Calendar Page, no details", "chrisbenti.com/cal"],
-    ["/send-money", "Send money to me", "chrisbenti.com/send-money"],
-    ["/drop", "Drop Site", "chrisbenti.com/drop"]
+    ["/cal", "Calendar Page, no details", "ethangoh.com/cal"],
+    ["/send-money", "Send money to me", "ethangoh.com/send-money"],
+    ["/drop", "Drop Site", "ethangoh.com/drop"]
 ];
 
 export const ResourcesPage = () => (

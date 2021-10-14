@@ -32,7 +32,7 @@ const ResumeIcon = styled(VscFilePdf)`
 export const ResumePage = () => (
     <RoyalBluePage>
         <ResumeLink>
-            <ResumeA href="https://www.chrisbenti.com/resume-content/chris-bentivenga-resume.pdf">
+            <ResumeA href="https://www.ethangoh.com/resume-content/ethan-goh-resume.pdf">
                 <ResumeIcon />
                 <ResumeText>(Click Me)</ResumeText>
             </ResumeA>

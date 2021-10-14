@@ -34,7 +34,7 @@ export const ReactRoutes = {
 };
 
 export const RedirectRoutes = {
-    "/pc": "https://pcpartpicker.com/user/chrisbenti/saved/kP29WZ",
+    "/pc": "https://pcpartpicker.com/user/ethangoh/saved/kP29WZ",
     "/zoom":
         "https://us04web.zoom.us/j/4894814721?pwd=T05md1JJaUFGNG9oZ09vRHJ3RlQ5QT09",
     "/how-it-works":
