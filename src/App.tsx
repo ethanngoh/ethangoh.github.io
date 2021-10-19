@@ -27,7 +27,7 @@ function App() {
                 {/* Index page last so there's no chance it conflicts with anything */}
                 <Route exact path="/">
                     <Helmet>
-                        <title>Chris Bentivenga</title>
+                        <title>Ethan Goh</title>
                     </Helmet>
                     <IndexPage />
                 </Route>
