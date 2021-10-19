@@ -34,8 +34,7 @@ export const ReactRoutes = {
 export const RedirectRoutes = {
     "/zoom":
         "https://us05web.zoom.us/j/3015463277?pwd=NXUvNzVrekJzSzRyblUxUkJoR3hqQT09",
-    "/discord":
-        "https://discord.gg/VmPNuyPN",
+    "/discord": "https://discord.gg/VmPNuyPN",
     "/how-it-works":
-        "https://docs.google.com/document/d/1QGgCjgyL10sENRjS8uEywqrc7sY7Qs306ny_ZID4Ixw/edit?usp=sharing",
+        "https://docs.google.com/document/d/1QGgCjgyL10sENRjS8uEywqrc7sY7Qs306ny_ZID4Ixw/edit?usp=sharing"
 };
