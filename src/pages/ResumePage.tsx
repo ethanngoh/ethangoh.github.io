@@ -1,4 +1,4 @@
-import { RoyalBluePage } from "../components/royalBluePage";
+import { GreenPage } from "../components/greenPage";
 import styled from "styled-components";
 import { VscFilePdf } from "react-icons/vsc";
 import { COLORS } from "../colors";
@@ -12,10 +12,10 @@ const ResumeLink = styled.div`
 
 const ResumeA = styled.a`
     text-decoration: none;
-    color: ${COLORS.ROYAL_BLUE};
+    color: ${COLORS.GREEN};
     padding: 2em;
     &:hover {
-        border: dashed 1px ${COLORS.ROYAL_BLUE};
+        border: dashed 1px ${COLORS.GREEN};
     }
 `;
 
@@ -30,12 +30,12 @@ const ResumeIcon = styled(VscFilePdf)`
 `;
 
 export const ResumePage = () => (
-    <RoyalBluePage>
+    <GreenPage>
         <ResumeLink>
             <ResumeA href="https://www.ethangoh.com/resume-content/ethan-goh-resume.pdf">
                 <ResumeIcon />
                 <ResumeText>(Click Me)</ResumeText>
             </ResumeA>
         </ResumeLink>
-    </RoyalBluePage>
+    </GreenPage>
 );

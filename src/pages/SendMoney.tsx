@@ -1,4 +1,4 @@
-import { RoyalBluePage } from "../components/royalBluePage";
+import { GreenPage } from "../components/greenPage";
 import { Table, THead, TH, TBody, TR, TD } from "../components/table";
 
 const PROVIDERS = [
@@ -7,7 +7,7 @@ const PROVIDERS = [
 ];
 export const SendMoney = () => {
     return (
-        <RoyalBluePage>
+        <GreenPage>
             <Table>
                 <THead>
                     <TH>Provider</TH>
@@ -24,6 +24,6 @@ export const SendMoney = () => {
                     ))}
                 </TBody>
             </Table>
-        </RoyalBluePage>
+        </GreenPage>
     );
 };

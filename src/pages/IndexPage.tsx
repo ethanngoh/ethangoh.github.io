@@ -5,7 +5,7 @@ import { IoIosMail } from "react-icons/io";
 import { GoGlobe } from "react-icons/go";
 import { useBackgroundColor } from "../hooks/useBackgroundColor";
 import { COLORS } from "../colors";
-import { RoyalBluePage } from "../components/royalBluePage";
+import { GreenPage } from "../components/greenPage";
 
 const Content = styled.div`
     display: flex;
@@ -40,14 +40,14 @@ const Subheader = styled.div`
 `;
 
 const Spacer = styled.div`
-    border-top: solid 1px ${COLORS.ROYAL_BLUE};
+    border-top: solid 1px ${COLORS.GREEN};
     width: 100%;
     height: 0;
     margin: 1.2em 0;
 
     @media (min-width: 768px) {
         border-top: none;
-        border-left: solid 1px ${COLORS.ROYAL_BLUE};
+        border-left: solid 1px ${COLORS.GREEN};
         width: 0;
         height: unset;
         align-self: stretch;
@@ -88,13 +88,13 @@ const DetailIcon = styled.div`
 
 const DetailLink = styled.a`
     text-decoration: none;
-    color: ${COLORS.ROYAL_BLUE};
+    color: ${COLORS.GREEN};
 `;
 
 export const IndexPage = () => {
-    useBackgroundColor(COLORS.ROYAL_BLUE);
+    useBackgroundColor(COLORS.GREEN);
     return (
-        <RoyalBluePage>
+        <GreenPage>
             <Content>
                 <Header>
                     <Name>Ethan Goh</Name>
@@ -145,6 +145,6 @@ export const IndexPage = () => {
                     </DetailItem>
                 </Details>
             </Content>
-        </RoyalBluePage>
+        </GreenPage>
     );
 };

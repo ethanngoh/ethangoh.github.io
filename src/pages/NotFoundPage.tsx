@@ -1,4 +1,4 @@
-import { RoyalBluePage } from "../components/royalBluePage";
+import { GreenPage } from "../components/greenPage";
 import styled from "styled-components";
 import { GrDocumentMissing } from "react-icons/gr";
 import { COLORS } from "../colors";
@@ -25,18 +25,18 @@ const MissingSubtext = styled.a`
     font-size: 0.75em;
     text-decoration: none;
     color: ${COLORS.OFF_WHITE};
-    background-color: ${COLORS.ROYAL_BLUE};
+    background-color: ${COLORS.GREEN};
     &:hover {
         opacity: 0.9;
     }
 `;
 
 export const NotFoundPage = () => (
-    <RoyalBluePage>
+    <GreenPage>
         <MissingPage>
             <MissingIcon />
             <MissingText>Page not found.</MissingText>
             <MissingSubtext href="/">Try here instead.</MissingSubtext>
         </MissingPage>
-    </RoyalBluePage>
+    </GreenPage>
 );

@@ -1,4 +1,4 @@
-import { RoyalBluePage } from "../components/royalBluePage";
+import { GreenPage } from "../components/greenPage";
 import { Table, THead, TH, TBody, TR, TD } from "../components/table";
 
 const RESOURCES = [
@@ -17,7 +17,7 @@ const RESOURCES = [
 ];
 
 export const ResourcesPage = () => (
-    <RoyalBluePage>
+    <GreenPage>
         <Table>
             <THead>
                 <TH>Path</TH>
@@ -36,5 +36,5 @@ export const ResourcesPage = () => (
                 ))}
             </TBody>
         </Table>
-    </RoyalBluePage>
+    </GreenPage>
 );

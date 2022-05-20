@@ -11,8 +11,8 @@ const WrappingBox = styled.div`
     width: 100%;
     box-sizing: border-box;
 
-    border: solid 20px ${COLORS.ROYAL_BLUE};
-    color: ${COLORS.ROYAL_BLUE};
+    border: solid 20px ${COLORS.GREEN};
+    color: ${COLORS.GREEN};
     background-color: ${COLORS.OFF_WHITE};
 
     padding: 3em;
@@ -28,7 +28,7 @@ const WrappingBoxNoBorder = styled.div`
     width: 100%;
     box-sizing: border-box;
 
-    color: ${COLORS.ROYAL_BLUE};
+    color: ${COLORS.GREEN};
     background-color: ${COLORS.OFF_WHITE};
 
     display: flex;
@@ -37,7 +37,7 @@ const WrappingBoxNoBorder = styled.div`
     text-align: center;
 `;
 
-export const NoPaddingNoBluePage: React.FunctionComponent = (props) => (
+export const NoPaddingNoGreenPage: React.FunctionComponent = (props) => (
     <RoyalFont>
         <Div100vh style={{ width: "100vw" }}>
             <WrappingBoxNoBorder {...props} />
@@ -45,7 +45,7 @@ export const NoPaddingNoBluePage: React.FunctionComponent = (props) => (
     </RoyalFont>
 );
 
-export const RoyalBluePage: React.FunctionComponent = (props) => (
+export const GreenPage: React.FunctionComponent = (props) => (
     <RoyalFont>
         <Div100vh style={{ width: "100vw" }}>
             <WrappingBox {...props} />
