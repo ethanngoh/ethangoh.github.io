@@ -30,7 +30,7 @@ export const ReactRoutes = {
         component: <SendMoney />,
         title: "Send Money | Ethan Goh"
     },
-    "/artwork": {
+    "/art-collection": {
         component: <Artwork />,
         title: "Artwork | Ethan Goh"
     }
