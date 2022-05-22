@@ -1,9 +1,9 @@
 mogrify -format jpg *.HEIC
 
-i=0
+i=21
 for f in *.jpg; do
   newfile=${i}.jpg
-  convert $f -resize 1080x1080 ../optimized/$newfile
+  convert $f -resize 1080x1080 $newfile
   echo "newfile name -> $newfile"
   (( i++ ))
 done

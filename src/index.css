@@ -343,3 +343,9 @@ template {
 [hidden] {
     display: none;
 }
+
+.image-gallery-thumbnail.active,
+.image-gallery-thumbnail:focus,
+.image-gallery-thumbnail:hover {
+    border: 2px solid #337ab7;
+}

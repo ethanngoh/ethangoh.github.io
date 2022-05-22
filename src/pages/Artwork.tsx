@@ -46,6 +46,17 @@ const PlacardDisplay = styled.div`
     font-size: 18px;
 `;
 
+const PlacardArtist = styled.div`
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1.5em;
+`;
+
+const PlacardBody = styled.div`
+    margin-bottom: 0.5em;
+`;
+
 const imageRange = Array.from({ length: 24 }, (_, i) => i);
 
 const images = imageRange.map((x) => {
@@ -114,12 +125,12 @@ interface ImageMetadata {
 function Placard({ metadata }: { metadata: ImageMetadata }) {
     return (
         <PlacardDisplay>
-            <b>{metadata.artist}</b>
-            <p>
-                <i>{metadata.title}</i>
-            </p>
-            <p>{metadata.medium}</p>
-            <p>{metadata.year}</p>
+            <PlacardArtist>{metadata.artist}</PlacardArtist>
+            <PlacardBody>
+                <b>{metadata.title}</b>
+            </PlacardBody>
+            <PlacardBody>{metadata.medium}</PlacardBody>
+            <PlacardBody>{metadata.year}</PlacardBody>
         </PlacardDisplay>
     );
 }
@@ -133,7 +144,7 @@ export function Artwork() {
             <GalleryBox>
                 <Container>
                     <Row>
-                        <Col md={8}>
+                        <Col md={8} xs={12}>
                             <ImageGallery
                                 items={images}
                                 onSlide={setImageIndex}
@@ -143,7 +154,7 @@ export function Artwork() {
                                 renderRightNav={customRightNav}
                             />
                         </Col>
-                        <Col md={4}>
+                        <Col md={4} xs={1}>
                             <Placard
                                 metadata={
                                     (artData as any)[
