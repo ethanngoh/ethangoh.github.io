@@ -4,7 +4,7 @@ import Div100vh from "react-div-100vh";
 import { COLORS } from "../colors";
 import { Container, Row, Col } from "react-grid-system";
 
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { useBackgroundColor } from "../hooks/useBackgroundColor";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import artData from "../data/artwork.json";
@@ -13,11 +13,9 @@ const WrappingBox = styled.div`
     height: calc(100% - 20px);
     width: calc(100% - 20px);
     box-sizing: border-box;
-
     border: solid 1px ${COLORS.OFF_WHITE};
     color: ${COLORS.OFF_WHITE};
     background-color: ${COLORS.BLACK};
-
     margin: 10px;
 `;
 
