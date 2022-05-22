@@ -38,7 +38,15 @@ const RoyalFont = styled.div`
     font-weight: lighter;
 `;
 
-const imageRange = Array.from({ length: 20 }, (_, i) => i);
+const PlacardDisplay = styled.div`
+    display: block;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+    font-size: 18px;
+`;
+
+const imageRange = Array.from({ length: 24 }, (_, i) => i);
 
 const images = imageRange.map((x) => {
     const key = `${x}.jpg`;
@@ -94,6 +102,28 @@ function customRightNav(
     );
 }
 
+interface ImageMetadata {
+    title: string;
+    story: string;
+    artist: string;
+    medium: string;
+    size: string;
+    year: string;
+}
+
+function Placard({ metadata }: { metadata: ImageMetadata }) {
+    return (
+        <PlacardDisplay>
+            <b>{metadata.artist}</b>
+            <p>
+                <i>{metadata.title}</i>
+            </p>
+            <p>{metadata.medium}</p>
+            <p>{metadata.year}</p>
+        </PlacardDisplay>
+    );
+}
+
 export function Artwork() {
     const [imageIndex, setImageIndex] = useState(0);
     useBackgroundColor("black");
@@ -113,7 +143,15 @@ export function Artwork() {
                                 renderRightNav={customRightNav}
                             />
                         </Col>
-                        <Col md={4}>{images[imageIndex].story}</Col>
+                        <Col md={4}>
+                            <Placard
+                                metadata={
+                                    (artData as any)[
+                                        `${imageIndex}.jpg`
+                                    ] as ImageMetadata
+                                }
+                            />
+                        </Col>
                     </Row>
                 </Container>
             </GalleryBox>

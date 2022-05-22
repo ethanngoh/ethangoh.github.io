@@ -1,14 +1,194 @@
 {
     "0.jpg": {
-        "title": "Tigers Chilling",
+        "title": "Jungle Heat",
         "story": "Tigers literally chilling in water.",
         "artist": "Shirley Lim",
         "medium": "Oil on canvas",
         "size": "50 x 60cm",
-        "year": "2006"
+        "year": "2014"
     },
     "1.jpg": {
-        "title": "Monet wanabe",
-        "story": "Monet wanabe seriously what."
+        "title": "A garden in Greece",
+        "story": "",
+        "artist": "Shirley Lim",
+        "medium": "Oil on canvas",
+        "size": "37.5 x 45.75cm",
+        "year": "2003"
+    },
+    "2.jpg": {
+        "title": "Smiling Pansies",
+        "story": "",
+        "artist": "Shirley Lim",
+        "medium": "Oil on canvas",
+        "size": "45.5 x 53cm",
+        "year": "2014"
+    },
+    "3.jpg": {
+        "title": "Youthful Sincerity",
+        "story": "",
+        "artist": "Shirley Lim",
+        "medium": "Oil on canvas",
+        "size": "45.5 x 53cm",
+        "year": "2014"
+    },
+    "4.jpg": {
+        "title": "Family of Parakeets",
+        "story": "",
+        "artist": "Shirley Lim",
+        "medium": "Oil on canvas",
+        "size": "41 x 53cm",
+        "year": "2014"
+    },
+    "5.jpg": {
+        "title": "Huddling Hummingbirds",
+        "story": "",
+        "artist": "Shirley Lim",
+        "medium": "Oil on canvas",
+        "size": "41 x 53cm",
+        "year": "2014"
+    },
+    "6.jpg": {
+        "title": "Birdbath",
+        "story": "",
+        "artist": "Shirley Lim",
+        "medium": "Oil on canvas",
+        "size": "41 x 53cm",
+        "year": "2014"
+    },
+    "7.jpg": {
+        "title": "Bowl of Apples",
+        "story": "",
+        "artist": "Shirley Lim",
+        "medium": "Oil on canvas",
+        "size": "31.5 x 40.5cm",
+        "year": "2005"
+    },
+    "8.jpg": {
+        "title": "Summer in the Marches",
+        "story": "",
+        "artist": "Shirley Lim",
+        "medium": "Oil on canvas",
+        "size": "53 x 65.25cm",
+        "year": "2013"
+    },
+    "9.jpg": {
+        "title": "Deciduous",
+        "story": "",
+        "artist": "Shirley Lim",
+        "medium": "Oil on canvas",
+        "size": "53 x 65.25cm",
+        "year": "2015"
+    },
+    "10.jpg": {
+        "title": "Canyon in the fall",
+        "story": "",
+        "artist": "Shirley Lim",
+        "medium": "Oil on canvas",
+        "size": "53 x 41cm",
+        "year": "2005"
+    },
+    "11.jpg": {
+        "title": "Autumn Glaze",
+        "story": "",
+        "artist": "Shirley Lim",
+        "medium": "Oil on canvas",
+        "size": "41 x 53cm",
+        "year": "2013"
+    },
+    "12.jpg": {
+        "title": "Mabry Mill",
+        "story": "",
+        "artist": "Shirley Lim",
+        "medium": "Oil on canvas",
+        "size": "65.25 x 53cm",
+        "year": "2014"
+    },
+    "13.jpg": {
+        "title": "Sunflowers",
+        "story": "",
+        "artist": "Shirley Lim",
+        "medium": "Oil on canvas",
+        "size": "40.5 x 31.5cm",
+        "year": "2005"
+    },
+    "14.jpg": {
+        "title": "Mother's Safety",
+        "story": "",
+        "artist": "Shirley Lim",
+        "medium": "Oil on canvas",
+        "size": "50 x 60cm",
+        "year": "2015"
+    },
+    "15.jpg": {
+        "title": "The Road Returning Home",
+        "story": "",
+        "artist": "Shirley Lim",
+        "medium": "Oil on canvas",
+        "size": "45.5 x 38cm",
+        "year": "2006"
+    },
+    "16.jpg": {
+        "title": "Kayaking in the Summer",
+        "story": "",
+        "artist": "Shirley Lim",
+        "medium": "Oil on canvas",
+        "size": "53 x 64.75cm",
+        "year": "2013"
+    },
+    "17.jpg": {
+        "title": "Indeterminant Season",
+        "story": "",
+        "artist": "Shirley Lim",
+        "medium": "Oil on canvas",
+        "size": "53 x 64.75cm",
+        "year": "2013"
+    },
+    "18.jpg": {
+        "title": "More Roses in Vases",
+        "story": "",
+        "artist": "Shirley Lim",
+        "medium": "Oil on canvas",
+        "size": "53 x 45.5cm",
+        "year": "2013"
+    },
+    "19.jpg": {
+        "title": "Hydrandrea Planter",
+        "story": "",
+        "artist": "Shirley Lim",
+        "medium": "Oil on canvas",
+        "size": "53 x 64.75cm",
+        "year": "2013"
+    },
+    "20.jpg": {
+        "title": "Roses in a Vase",
+        "story": "",
+        "artist": "Shirley Lim",
+        "medium": "Oil on canvas",
+        "size": "45.5 x 38cm",
+        "year": "2014"
+    },
+    "21.jpg": {
+        "title": "White and Pink Flowers",
+        "story": "",
+        "artist": "Shirley Lim",
+        "medium": "Oil on canvas",
+        "size": "33 x 24cm",
+        "year": "2005"
+    },
+    "22.jpg": {
+        "title": "Mangroves",
+        "story": "",
+        "artist": "Shirley Lim",
+        "medium": "Oil on canvas",
+        "size": "41 x 53cm",
+        "year": "2013"
+    },
+    "23.jpg": {
+        "title": "Walk in the Park",
+        "story": "",
+        "artist": "Shirley Lim",
+        "medium": "Oil on canvas",
+        "size": "41 x 53cm",
+        "year": "2006"
     }
 }
