@@ -65,7 +65,8 @@ const images = imageRange.map((x) => {
 
     return {
         original: `artwork/${x}.jpg`,
-        originalHeight: 500,
+        originalHeight: 400,
+        thumbnailHeight: 60,
         thumbnail: `artwork/${x}_t.jpg`,
         ...meta
     };
@@ -143,7 +144,7 @@ export function Artwork() {
             <Title>Art Collection</Title>
             <GalleryBox>
                 <Container>
-                    <Row>
+                    <Row style={{ alignItems: "center" }}>
                         <Col md={8} xs={12}>
                             <ImageGallery
                                 items={images}
@@ -152,6 +153,7 @@ export function Artwork() {
                                 showPlayButton={false}
                                 renderLeftNav={customLeftNav}
                                 renderRightNav={customRightNav}
+                                thumbnailPosition={"top"}
                             />
                         </Col>
                         <Col md={4} xs={1}>
