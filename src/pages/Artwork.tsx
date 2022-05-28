@@ -8,6 +8,7 @@ import React, { useState } from "react";
 import { useBackgroundColor } from "../hooks/useBackgroundColor";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import artData from "../data/artwork.json";
+import { HiddenOnMobile, OnlyOnMobile } from "../components/responsiveUtils";
 
 const WrappingBox = styled.div`
     height: calc(100% - 20px);
@@ -16,6 +17,10 @@ const WrappingBox = styled.div`
     border: solid 1px ${COLORS.OFF_WHITE};
     color: ${COLORS.OFF_WHITE};
     background-color: ${COLORS.BLACK};
+    margin: 10px;
+`;
+
+const MobileContainer = styled.div`
     margin: 10px;
 `;
 
@@ -46,6 +51,25 @@ const PlacardDisplay = styled.div`
     font-size: 18px;
 `;
 
+const CompactPlacardDisplay = styled.div`
+    display: block;
+    align-items: left;
+    font-size: 18px;
+    margin-top: 1em;
+`;
+
+const CompactPlacardDisplayRow = styled.div`
+    display: flex;
+    justify-content: center;
+    text-align: center;
+`;
+
+const CompactPlacardArtist = styled.div`
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 0.1rem;
+`;
+
 const PlacardArtist = styled.div`
     text-transform: uppercase;
     font-weight: normal;
@@ -57,8 +81,11 @@ const PlacardBody = styled.div`
     margin-bottom: 0.5em;
 `;
 
-const imageRange = Array.from({ length: 24 }, (_, i) => i);
+const PlacardSeparator = styled.div`
+    margin: 0 0.3em;
+`;
 
+const imageRange = Array.from({ length: 24 }, (_, i) => i);
 const images = imageRange.map((x) => {
     const key = `${x}.jpg`;
     const meta = (artData as any)[key];
@@ -136,6 +163,25 @@ function Placard({ metadata }: { metadata: ImageMetadata }) {
     );
 }
 
+function CompactPlacard({ metadata }: { metadata: ImageMetadata }) {
+    return (
+        <CompactPlacardDisplay>
+            <CompactPlacardDisplayRow>
+                <CompactPlacardArtist>{metadata.artist}</CompactPlacardArtist>
+                <PlacardSeparator>•</PlacardSeparator>
+                <PlacardBody>
+                    <b>{metadata.title}</b>
+                </PlacardBody>
+            </CompactPlacardDisplayRow>
+            <CompactPlacardDisplayRow>
+                <PlacardBody>{metadata.medium}</PlacardBody>
+                <PlacardSeparator>•</PlacardSeparator>
+                <PlacardBody>{metadata.year}</PlacardBody>
+            </CompactPlacardDisplayRow>
+        </CompactPlacardDisplay>
+    );
+}
+
 export function Artwork() {
     const [imageIndex, setImageIndex] = useState(0);
     useBackgroundColor("black");
@@ -143,30 +189,52 @@ export function Artwork() {
         <ArtworkPage>
             <Title>Art Collection</Title>
             <GalleryBox>
-                <Container>
-                    <Row style={{ alignItems: "center" }}>
-                        <Col md={8} xs={12}>
-                            <ImageGallery
-                                items={images}
-                                onSlide={setImageIndex}
-                                showFullscreenButton={false}
-                                showPlayButton={false}
-                                renderLeftNav={customLeftNav}
-                                renderRightNav={customRightNav}
-                                thumbnailPosition={"top"}
-                            />
-                        </Col>
-                        <Col md={4} xs={1}>
-                            <Placard
-                                metadata={
-                                    (artData as any)[
-                                        `${imageIndex}.jpg`
-                                    ] as ImageMetadata
-                                }
-                            />
-                        </Col>
-                    </Row>
-                </Container>
+                <HiddenOnMobile>
+                    <Container>
+                        <Row style={{ alignItems: "center" }}>
+                            <Col md={8} xs={12}>
+                                <ImageGallery
+                                    items={images}
+                                    onSlide={setImageIndex}
+                                    showFullscreenButton={false}
+                                    showPlayButton={false}
+                                    renderLeftNav={customLeftNav}
+                                    renderRightNav={customRightNav}
+                                    thumbnailPosition={"top"}
+                                />
+                            </Col>
+                            <Col md={4} xs={1}>
+                                <Placard
+                                    metadata={
+                                        (artData as any)[
+                                            `${imageIndex}.jpg`
+                                        ] as ImageMetadata
+                                    }
+                                />
+                            </Col>
+                        </Row>
+                    </Container>
+                </HiddenOnMobile>
+                <OnlyOnMobile>
+                    <MobileContainer>
+                        <ImageGallery
+                            items={images}
+                            onSlide={setImageIndex}
+                            showFullscreenButton={false}
+                            showPlayButton={false}
+                            renderLeftNav={customLeftNav}
+                            renderRightNav={customRightNav}
+                            thumbnailPosition={"left"}
+                        />
+                        <CompactPlacard
+                            metadata={
+                                (artData as any)[
+                                    `${imageIndex}.jpg`
+                                ] as ImageMetadata
+                            }
+                        />
+                    </MobileContainer>
+                </OnlyOnMobile>
             </GalleryBox>
         </ArtworkPage>
     );
