@@ -2,7 +2,7 @@ import ImageGallery from "react-image-gallery";
 import styled from "styled-components";
 import Div100vh from "react-div-100vh";
 import { COLORS } from "../colors";
-import { Container, Row, Col } from "react-grid-system";
+import { Container } from "react-grid-system";
 
 import React, { useState } from "react";
 import { useBackgroundColor } from "../hooks/useBackgroundColor";
