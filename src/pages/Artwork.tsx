@@ -95,8 +95,12 @@ const images = imageRange.map((x) => {
         originalHeight: 400,
         thumbnailHeight: 60,
         thumbnail: `artwork/${x}_t.jpg`,
-        ...meta
+        metadata: { ...meta }
     };
+});
+
+const sortedImages = images.sort((a: any, b: any) => {
+    return a.metadata.year.localeCompare(b.metadata.year);
 });
 
 export const ArtworkPage: React.FunctionComponent = (props) => (
@@ -194,7 +198,7 @@ export function Artwork() {
                         <Row style={{ alignItems: "center" }}>
                             <Col md={8} xs={12}>
                                 <ImageGallery
-                                    items={images}
+                                    items={sortedImages}
                                     onSlide={setImageIndex}
                                     showFullscreenButton={false}
                                     showPlayButton={false}
@@ -206,8 +210,8 @@ export function Artwork() {
                             <Col md={4} xs={1}>
                                 <Placard
                                     metadata={
-                                        (artData as any)[
-                                            `${imageIndex}.jpg`
+                                        sortedImages[imageIndex][
+                                            "metadata"
                                         ] as ImageMetadata
                                     }
                                 />
@@ -218,7 +222,7 @@ export function Artwork() {
                 <OnlyOnMobile>
                     <MobileContainer>
                         <ImageGallery
-                            items={images}
+                            items={sortedImages}
                             onSlide={setImageIndex}
                             showFullscreenButton={false}
                             showPlayButton={false}
@@ -228,8 +232,8 @@ export function Artwork() {
                         />
                         <CompactPlacard
                             metadata={
-                                (artData as any)[
-                                    `${imageIndex}.jpg`
+                                sortedImages[imageIndex][
+                                    "metadata"
                                 ] as ImageMetadata
                             }
                         />
