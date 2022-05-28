@@ -20,10 +20,6 @@ const WrappingBox = styled.div`
     margin: 10px;
 `;
 
-const MobileContainer = styled.div`
-    margin: 10px;
-`;
-
 const GalleryBox = styled.div`
     display: flex;
     align-items: center;
@@ -33,7 +29,7 @@ const GalleryBox = styled.div`
 
 const Title = styled.div`
     font-family: "Raleway", sans-serif;
-    margin: 1em;
+    margin: 1em 1em 0 1em;
     font-size: 36px;
     font-weight: lighter;
 `;
@@ -46,35 +42,20 @@ const RoyalFont = styled.div`
 const PlacardDisplay = styled.div`
     display: block;
     align-items: left;
-    justify-content: left;
-    text-align: left;
-    font-size: 18px;
-`;
-
-const CompactPlacardDisplay = styled.div`
-    display: block;
-    align-items: left;
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 1em;
 `;
 
-const CompactPlacardDisplayRow = styled.div`
+const PlacardDisplayRow = styled.div`
     display: flex;
     justify-content: center;
     text-align: center;
-`;
-
-const CompactPlacardArtist = styled.div`
-    text-transform: uppercase;
-    font-weight: normal;
-    letter-spacing: 0.1rem;
 `;
 
 const PlacardArtist = styled.div`
     text-transform: uppercase;
     font-weight: normal;
     letter-spacing: 0.1rem;
-    margin-bottom: 1.5em;
 `;
 
 const PlacardBody = styled.div`
@@ -92,7 +73,7 @@ const images = imageRange.map((x) => {
 
     return {
         original: `artwork/${x}.jpg`,
-        originalHeight: 400,
+        originalHeight: 500,
         thumbnailHeight: 60,
         thumbnail: `artwork/${x}_t.jpg`,
         metadata: { ...meta }
@@ -100,6 +81,23 @@ const images = imageRange.map((x) => {
 });
 
 const sortedImages = images.sort((a: any, b: any) => {
+    return a.metadata.year.localeCompare(b.metadata.year);
+});
+
+const mobileImages = imageRange.map((x) => {
+    const key = `${x}.jpg`;
+    const meta = (artData as any)[key];
+
+    return {
+        original: `artwork/${x}.jpg`,
+        originalHeight: 400,
+        thumbnailHeight: 60,
+        thumbnail: `artwork/${x}_t.jpg`,
+        metadata: { ...meta }
+    };
+});
+
+const sortedMobileImages = mobileImages.sort((a: any, b: any) => {
     return a.metadata.year.localeCompare(b.metadata.year);
 });
 
@@ -157,32 +155,19 @@ interface ImageMetadata {
 function Placard({ metadata }: { metadata: ImageMetadata }) {
     return (
         <PlacardDisplay>
-            <PlacardArtist>{metadata.artist}</PlacardArtist>
-            <PlacardBody>
-                <b>{metadata.title}</b>
-            </PlacardBody>
-            <PlacardBody>{metadata.medium}</PlacardBody>
-            <PlacardBody>{metadata.year}</PlacardBody>
-        </PlacardDisplay>
-    );
-}
-
-function CompactPlacard({ metadata }: { metadata: ImageMetadata }) {
-    return (
-        <CompactPlacardDisplay>
-            <CompactPlacardDisplayRow>
-                <CompactPlacardArtist>{metadata.artist}</CompactPlacardArtist>
+            <PlacardDisplayRow>
+                <PlacardArtist>{metadata.artist}</PlacardArtist>
                 <PlacardSeparator>•</PlacardSeparator>
                 <PlacardBody>
                     <b>{metadata.title}</b>
                 </PlacardBody>
-            </CompactPlacardDisplayRow>
-            <CompactPlacardDisplayRow>
+            </PlacardDisplayRow>
+            <PlacardDisplayRow>
                 <PlacardBody>{metadata.medium}</PlacardBody>
                 <PlacardSeparator>•</PlacardSeparator>
                 <PlacardBody>{metadata.year}</PlacardBody>
-            </CompactPlacardDisplayRow>
-        </CompactPlacardDisplay>
+            </PlacardDisplayRow>
+        </PlacardDisplay>
     );
 }
 
@@ -193,34 +178,9 @@ export function Artwork() {
         <ArtworkPage>
             <Title>Art Collection</Title>
             <GalleryBox>
-                <HiddenOnMobile>
-                    <Container>
-                        <Row style={{ alignItems: "center" }}>
-                            <Col md={8} xs={12}>
-                                <ImageGallery
-                                    items={sortedImages}
-                                    onSlide={setImageIndex}
-                                    showFullscreenButton={false}
-                                    showPlayButton={false}
-                                    renderLeftNav={customLeftNav}
-                                    renderRightNav={customRightNav}
-                                    thumbnailPosition={"top"}
-                                />
-                            </Col>
-                            <Col md={4} xs={1}>
-                                <Placard
-                                    metadata={
-                                        sortedImages[imageIndex][
-                                            "metadata"
-                                        ] as ImageMetadata
-                                    }
-                                />
-                            </Col>
-                        </Row>
-                    </Container>
-                </HiddenOnMobile>
-                <OnlyOnMobile>
-                    <MobileContainer>
+                <Container>
+                    <br />
+                    <HiddenOnMobile>
                         <ImageGallery
                             items={sortedImages}
                             onSlide={setImageIndex}
@@ -228,17 +188,35 @@ export function Artwork() {
                             showPlayButton={false}
                             renderLeftNav={customLeftNav}
                             renderRightNav={customRightNav}
-                            thumbnailPosition={"left"}
+                            thumbnailPosition={"top"}
                         />
-                        <CompactPlacard
+                        <Placard
                             metadata={
                                 sortedImages[imageIndex][
                                     "metadata"
                                 ] as ImageMetadata
                             }
                         />
-                    </MobileContainer>
-                </OnlyOnMobile>
+                    </HiddenOnMobile>
+                    <OnlyOnMobile>
+                        <ImageGallery
+                            items={sortedMobileImages}
+                            onSlide={setImageIndex}
+                            showFullscreenButton={false}
+                            showPlayButton={false}
+                            renderLeftNav={customLeftNav}
+                            renderRightNav={customRightNav}
+                            showThumbnails={false}
+                        />
+                        <Placard
+                            metadata={
+                                sortedMobileImages[imageIndex][
+                                    "metadata"
+                                ] as ImageMetadata
+                            }
+                        />
+                    </OnlyOnMobile>
+                </Container>
             </GalleryBox>
         </ArtworkPage>
     );
