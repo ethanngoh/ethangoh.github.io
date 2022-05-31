@@ -66,6 +66,10 @@ const PlacardSeparator = styled.div`
     margin: 0 0.3em;
 `;
 
+const OpenseaLogo = styled.img`
+    width: 1.5em;
+`;
+
 const imageRange = Array.from({ length: 24 }, (_, i) => i);
 const images = imageRange.map((x) => {
     const key = `${x}.jpg`;
@@ -73,7 +77,7 @@ const images = imageRange.map((x) => {
 
     return {
         original: `artwork/${x}.jpg`,
-        originalHeight: 500,
+        originalHeight: 475,
         thumbnailHeight: 60,
         thumbnail: `artwork/${x}_t.jpg`,
         metadata: { ...meta }
@@ -150,6 +154,7 @@ interface ImageMetadata {
     medium: string;
     size: string;
     year: string;
+    openseaUrl: string;
 }
 
 function Placard({ metadata }: { metadata: ImageMetadata }) {
@@ -166,6 +171,11 @@ function Placard({ metadata }: { metadata: ImageMetadata }) {
                 <PlacardBody>{metadata.medium}</PlacardBody>
                 <PlacardSeparator>•</PlacardSeparator>
                 <PlacardBody>{metadata.year}</PlacardBody>
+            </PlacardDisplayRow>
+            <PlacardDisplayRow>
+                <a href={metadata.openseaUrl}>
+                    <OpenseaLogo alt="o" src="opensea.svg" />
+                </a>
             </PlacardDisplayRow>
         </PlacardDisplay>
     );
@@ -189,6 +199,8 @@ export function Artwork() {
                             renderLeftNav={customLeftNav}
                             renderRightNav={customRightNav}
                             thumbnailPosition={"top"}
+                            showIndex={true}
+                            indexSeparator={" of "}
                         />
                         <Placard
                             metadata={
@@ -207,6 +219,8 @@ export function Artwork() {
                             renderLeftNav={customLeftNav}
                             renderRightNav={customRightNav}
                             showThumbnails={false}
+                            showIndex={true}
+                            indexSeparator={" of "}
                         />
                         <Placard
                             metadata={
