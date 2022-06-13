@@ -4,7 +4,7 @@ import { ImLinkedin, ImLink } from "react-icons/im";
 import { IoIosMail } from "react-icons/io";
 import { GoGlobe } from "react-icons/go";
 import { useBackgroundColor } from "../hooks/useBackgroundColor";
-import { COLORS } from "../colors";
+import { getColor, ColorKey } from "../colors";
 import { GreenPage } from "../components/greenPage";
 
 const Content = styled.div`
@@ -40,14 +40,14 @@ const Subheader = styled.div`
 `;
 
 const Spacer = styled.div`
-    border-top: solid 1px ${COLORS.GREEN};
+    border-top: solid 1px ${getColor(ColorKey.PRIMARY)};
     width: 100%;
     height: 0;
     margin: 1.2em 0;
 
     @media (min-width: 768px) {
         border-top: none;
-        border-left: solid 1px ${COLORS.GREEN};
+        border-left: solid 1px ${getColor(ColorKey.PRIMARY)};
         width: 0;
         height: unset;
         align-self: stretch;
@@ -88,11 +88,11 @@ const DetailIcon = styled.div`
 
 const DetailLink = styled.a`
     text-decoration: none;
-    color: ${COLORS.GREEN};
+    color: ${getColor(ColorKey.PRIMARY)};
 `;
 
 export const IndexPage = () => {
-    useBackgroundColor(COLORS.GREEN);
+    useBackgroundColor(getColor(ColorKey.PRIMARY));
     return (
         <GreenPage>
             <Content>

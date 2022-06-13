@@ -1,7 +1,7 @@
 import { GreenPage } from "../components/greenPage";
 import styled from "styled-components";
 import { GrDocumentMissing } from "react-icons/gr";
-import { COLORS } from "../colors";
+import { getColor, ColorKey } from "../colors";
 
 const MissingPage = styled.div`
     display: flex;
@@ -24,8 +24,8 @@ const MissingSubtext = styled.a`
     border-radius: 10px;
     font-size: 0.75em;
     text-decoration: none;
-    color: ${COLORS.OFF_WHITE};
-    background-color: ${COLORS.GREEN};
+    color: ${getColor(ColorKey.BACKGROUND)};
+    background-color: ${getColor(ColorKey.PRIMARY)};
     &:hover {
         opacity: 0.9;
     }

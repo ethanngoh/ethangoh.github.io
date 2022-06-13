@@ -1,7 +1,7 @@
 import { GreenPage } from "../components/greenPage";
 import styled from "styled-components";
 import { VscFilePdf } from "react-icons/vsc";
-import { COLORS } from "../colors";
+import { getColor, ColorKey } from "../colors";
 
 const ResumeLink = styled.div`
     display: flex;
@@ -12,10 +12,10 @@ const ResumeLink = styled.div`
 
 const ResumeA = styled.a`
     text-decoration: none;
-    color: ${COLORS.GREEN};
+    color: ${getColor(ColorKey.PRIMARY)};
     padding: 2em;
     &:hover {
-        border: dashed 1px ${COLORS.GREEN};
+        border: dashed 1px ${getColor(ColorKey.PRIMARY)};
     }
 `;
 

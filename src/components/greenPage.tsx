@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { COLORS } from "../colors";
+import { getColor, ColorKey } from "../colors";
 import Div100vh from "react-div-100vh";
 
 const RoyalFont = styled.div`
@@ -11,9 +11,9 @@ const WrappingBox = styled.div`
     width: 100%;
     box-sizing: border-box;
 
-    border: solid 20px ${COLORS.GREEN};
-    color: ${COLORS.GREEN};
-    background-color: ${COLORS.OFF_WHITE};
+    border: solid 20px ${getColor(ColorKey.PRIMARY)};
+    color: ${getColor(ColorKey.PRIMARY)};
+    background-color: ${getColor(ColorKey.BACKGROUND)};
 
     padding: 3em;
 
@@ -28,8 +28,8 @@ const WrappingBoxNoBorder = styled.div`
     width: 100%;
     box-sizing: border-box;
 
-    color: ${COLORS.GREEN};
-    background-color: ${COLORS.OFF_WHITE};
+    color: ${getColor(ColorKey.PRIMARY)};
+    background-color: ${getColor(ColorKey.BACKGROUND)};
 
     display: flex;
     align-items: center;
