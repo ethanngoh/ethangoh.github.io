@@ -1,5 +1,5 @@
 import { GreenPage } from "../components/greenPage";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import { GrDocumentMissing } from "react-icons/gr";
 import { getColor, ColorKey } from "../colors";
 

@@ -1,6 +1,7 @@
 export enum ColorKey {
     PRIMARY = "PRIMARY",
-    BACKGROUND = "BACKGROUND"
+    BACKGROUND = "BACKGROUND",
+    HEADING = "HEADING"
 }
 
 export type ColorPalette = {
@@ -14,13 +15,15 @@ export const COLORS = {
 };
 
 export const LIGHT_COLORS: ColorPalette = {
-    PRIMARY: "#043400",
-    BACKGROUND: "#FFFAFA"
+    PRIMARY: "#000",
+    BACKGROUND: "#FFFAFA",
+    HEADING: "#043400"
 };
 
 export const DARK_COLORS: ColorPalette = {
-    PRIMARY: "#4ECDC4",
-    BACKGROUND: "#121212"
+    PRIMARY: "#FFF",
+    BACKGROUND: "#1E1E26",
+    HEADING: "#1DCEF5"
 };
 
 export function getColor(colorKey: keyof ColorPalette) {

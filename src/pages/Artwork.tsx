@@ -1,5 +1,5 @@
 import ImageGallery from "react-image-gallery";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import Div100vh from "react-div-100vh";
 import { COLORS } from "../colors";
 import { Container } from "react-grid-system";

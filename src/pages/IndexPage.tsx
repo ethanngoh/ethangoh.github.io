@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 import { ImLinkedin, ImLink } from "react-icons/im";
 import { IoIosMail } from "react-icons/io";
@@ -22,7 +22,7 @@ const Header = styled.div``;
 const Name = styled.div`
     font-weight: 700;
     font-size: 2.5em;
-
+    color: ${getColor(ColorKey.HEADING)};
     @media (max-width: 470px) {
         font-size: 2em;
     }

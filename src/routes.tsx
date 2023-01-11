@@ -6,6 +6,7 @@ import { ResourcesPage } from "./pages/ResourcesPage";
 import { Calendar } from "./pages/Calendar";
 import { SendMoney } from "./pages/SendMoney";
 import { Artwork } from "./pages/Artwork";
+import { ContactPage } from "./pages/ContactPage";
 
 export const ReactRoutes = {
     "/clock": { component: <Clock />, title: "Clock" },
@@ -17,6 +18,10 @@ export const ReactRoutes = {
     "/find-time": {
         component: <FindTime />,
         title: "Find Time | Ethan Goh"
+    },
+    "/contact": {
+        component: <ContactPage />,
+        title: "Contact | Ethan Goh"
     },
     "/ls": {
         component: <ResourcesPage />,

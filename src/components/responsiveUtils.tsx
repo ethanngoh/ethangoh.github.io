@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 // Using the bootstrap medium screen size to determine what a phone is
 export const HiddenOnMobile = styled.div`

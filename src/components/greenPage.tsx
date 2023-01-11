@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import { getColor, ColorKey } from "../colors";
 import Div100vh from "react-div-100vh";
 
@@ -11,7 +11,7 @@ const WrappingBox = styled.div`
     width: 100%;
     box-sizing: border-box;
 
-    border: solid 20px ${getColor(ColorKey.PRIMARY)};
+    border: solid 20px ${getColor(ColorKey.HEADING)};
     color: ${getColor(ColorKey.PRIMARY)};
     background-color: ${getColor(ColorKey.BACKGROUND)};
 
