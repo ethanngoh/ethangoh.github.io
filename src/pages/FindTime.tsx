@@ -4,7 +4,7 @@ import IframeResizer from "iframe-resizer-react";
 export const FindTime = () => (
     <NoPaddingNoGreenPage>
         <IframeResizer
-            src="https://meeting.calendr.it//ethangoh#color=#002366"
+            src="https://cal.com/ethangoh"
             style={{ width: "100%", height: "100%", border: 0 }}
         />
     </NoPaddingNoGreenPage>
