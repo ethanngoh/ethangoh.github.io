@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//macOS 13.1//EN
+N:Goh;Ethan;;;
+FN:Ethan Goh
+EMAIL;type=INTERNET;type=WORK;type=pref:ethan@ethangoh.com
+TEL;type=CELL;type=VOICE;type=pref:+1 4254452299
+item1.URL;type=pref:https://www.ethangoh.com/contact
+item1.X-ABLabel:_$!<HomePage>!$_
+END:VCARD
